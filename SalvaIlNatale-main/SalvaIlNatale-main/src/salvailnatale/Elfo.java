@@ -9,6 +9,7 @@ package salvailnatale;
  * @author ironm
  */
 public abstract class Elfo {
+    
     protected String nome;
     protected String tipo;
     protected int meccanica;
@@ -19,7 +20,7 @@ public abstract class Elfo {
     public Elfo(String nome, String tipo) {
         this.nome = nome;
         this.tipo = tipo;
-        this.meccanica = (int) (Math.random() * 4) + 2; // Valori 2-5
+        this.meccanica = (int) (Math.random() * 4) + 2; 
         this.pittura = (int) (Math.random() * 4) + 2;
         this.ingegneria = (int) (Math.random() * 4) + 2;
         this.magia = (int) (Math.random() * 4) + 2;
@@ -48,8 +49,6 @@ public abstract class Elfo {
 
     @Override
     public String toString() {
-        return "Elfo " + tipo + " " + nome +
-               " [Mec: " + meccanica + ", Pit: " + pittura +
-               ", Ing: " + ingegneria + ", Mag: " + magia + "]";
+        return "Elfo " + tipo + " " + nome + " [Mec: " + meccanica + ", Pit: " + pittura + ", Ing: " + ingegneria + ", Mag: " + magia + "]";
     }
 }

@@ -9,6 +9,7 @@ package salvailnatale;
  * @author ironm
  */
 public class Prodotto {
+    
     private String nome;
     private int punteggioQualita;
     private String livelloQualita;
@@ -20,11 +21,16 @@ public class Prodotto {
     }
 
     private void calcolaLivelloQualita() {
+        
         if (punteggioQualita >= 15) {
             livelloQualita = "Eccellente";
-        } else if (punteggioQualita >= 10) {
+        } 
+        
+        else if (punteggioQualita >= 10) {
             livelloQualita = "Buono";
-        } else {
+        } 
+        
+        else {
             livelloQualita = "Scadente";
         }
     }
@@ -32,7 +38,7 @@ public class Prodotto {
     @Override
     public String toString() {
         return "Giocattolo: " + nome +
-               " | Qualità: " + livelloQualita +
+               " | Qualita': " + livelloQualita +
                " (Punti: " + punteggioQualita + ")";
     }
 }

@@ -11,6 +11,7 @@ import java.util.Random;
  */
 
 public class Evento {
+    
     private String nome;
     private String effetto;
     private int modificatoreQualita;
@@ -33,9 +34,9 @@ public class Evento {
         eventiDisponibili.add(new Evento("Caffe Elfico", "Super Bevanda! La produzione e piu rapida.", 2, false));
 
         Random rand = new Random();
-        int indiceCasuale = rand.nextInt(eventiDisponibili.size());
+        int i = rand.nextInt(eventiDisponibili.size());
         
-        return eventiDisponibili.get(indiceCasuale);
+        return eventiDisponibili.get(i);
     }
 
     public int getModificatoreQualita() {

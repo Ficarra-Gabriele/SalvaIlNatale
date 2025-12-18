@@ -84,24 +84,29 @@ public class CatenaDiMontaggio {
     }
 
     @Override
-public String toString() {
-    String s = "--- Stato Catena -- ";
-    s += "Macchine: ";
-    for (Macchinario m : macchinari) {
-        s += m.toString() + "; ";
-    }
-    s += "Elfi Liberi: ";
-    for (Elfo e : magazzinoElfi) {
-        s += e.toString() + "; ";
-    }
-    s += "Prodotti Finiti (" + prodottiFiniti.size() + "): ";
-    if (!prodottiFiniti.isEmpty()) {
-        for (Prodotto p : prodottiFiniti) {
-            s += p.toString() + "; ";
+    public String toString() {
+        
+        String s =  "Stato Catena";
+        s += "Macchine: ";
+        for (Macchinario m : macchinari) {
+            s += m.toString() + "; ";
         }
-    } else {
-        s += "(Nessun prodotto)";
+        
+        s += "Elfi Liberi: ";
+        for (Elfo e : magazzinoElfi) {
+            s += e.toString() + "; ";
+        }
+        
+        s += "Prodotti Finiti (" + prodottiFiniti.size() + "): ";
+        if (!prodottiFiniti.isEmpty()) {
+            for (Prodotto p : prodottiFiniti) {
+                s += p.toString() + "; ";
+            }
+        }
+        
+        else {
+            s += "(Nessun prodotto)";
+        } 
+        return s;
+        }
     }
-    return s;
-    }
-}
